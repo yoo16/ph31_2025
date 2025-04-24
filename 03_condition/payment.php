@@ -50,9 +50,10 @@ if ($isMaintenance) {
             </div>
         <?php else: ?>
             <!-- 会計情報 -->
-            <div>
-                <?= $message ?>
+            <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-800 p-4 mb-4 rounded" role="alert">
+                <p class="font-semibold"><?= $message ?></p>
             </div>
+
             <div class="mx-auto mt-4 border border-gray-200 p-4 rounded bg-white shadow text-right">
                 <form action="" method="post">
                     <!-- 会員ステータス表示 -->
