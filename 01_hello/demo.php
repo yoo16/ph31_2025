@@ -16,5 +16,6 @@ $message = "きょうは曇りです";
 </head>
 <body>
     <h1>こんにちはー</h1>
+    <?php echo $message; ?>
 </body>
 </html>
