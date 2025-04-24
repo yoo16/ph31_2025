@@ -16,9 +16,9 @@ $price2 = 580;
 $price3 = 500;
 
 // TODO: quantity1, quantity2, quantity3に個数を代入
-$quantity1 = 0;
-$quantity2 = 0;
-$quantity3 = 0;
+$quantity1 = 1;
+$quantity2 = 2;
+$quantity3 = 1;
 
 // T0D0: 定数：割引率
 const DISCOUNT_RATE = 0;
