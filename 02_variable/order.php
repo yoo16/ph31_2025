@@ -11,6 +11,9 @@ $image2 = "images/orange.webp";
 $image3 = "images/tea.webp";
 
 // TODO: price1, price2, price3に価格を代入
+$price1 = 550;
+$price2 = 580;
+$price3 = 500;
 
 // TODO: quantity1, quantity2, quantity3に個数を代入
 $quantity1 = 0;
