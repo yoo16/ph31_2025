@@ -6,7 +6,7 @@ $charge = 1000;
 // メッセージ
 $message = "";
 // メンテナンス中
-$isMaintenance = true;
+$isMaintenance = false;
 
 // 会員フラグ
 $isMember = true;
