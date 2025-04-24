@@ -33,9 +33,9 @@ $quantity1++;
 $quantity2--;
 
 // TODO: amount1, amount2, amount3に「価格 x 個数」を代入
-$amount1 = 0;
-$amount2 = 0;
-$amount3 = 0;
+$amount1 = $price1 * $quantity1;
+$amount2 = $price2 * $quantity2;
+$amount3 = $price3 * $quantity3;
 
 // TODO: 通常合計価格
 $total = 0;
