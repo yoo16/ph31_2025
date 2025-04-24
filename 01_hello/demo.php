@@ -5,6 +5,7 @@ $message = "きょうは曇りです";
 // Python
 // message = "きょうは曇りです"
 
+$title = "マイページ";
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +13,7 @@ $message = "きょうは曇りです";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><?php echo $title ?></title>
 </head>
 <body>
     <h1>こんにちはー</h1>
