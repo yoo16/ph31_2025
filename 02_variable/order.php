@@ -41,11 +41,11 @@ $amount3 = $price3 * $quantity3;
 $total = $amount1 + $amount2 + $amount3;
 
 // TODO: 会員フラグ (true/false)
-$isMember;
+$isMember = true;
 
 // 三項演算
 // TODO: isMember が true :会員、false: 非会員
-$memberLabel = "会員";
+$memberLabel = ($isMember) ? "会員" : "非会員";
 
 // TODO: 会員の場合、割引率を DISCOUNT_RATE に設定
 $discountRate = 0;
