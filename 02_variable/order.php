@@ -6,6 +6,9 @@ $drink2 = "オレンジジュース";
 $drink3 = "紅茶";
 
 // TODO: image1, image2, image3に画像ファイル名を代入
+$image1 = "images/cola.webp";
+$image2 = "images/orange.webp";
+$image3 = "images/tea.webp";
 
 // TODO: price1, price2, price3に価格を代入
 
