@@ -38,7 +38,7 @@ $amount2 = $price2 * $quantity2;
 $amount3 = $price3 * $quantity3;
 
 // TODO: 通常合計価格
-$total = 0;
+$total = $amount1 + $amount2 + $amount3;
 
 // TODO: 会員フラグ (true/false)
 $isMember;
