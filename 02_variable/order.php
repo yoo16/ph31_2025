@@ -21,8 +21,9 @@ $quantity2 = 2;
 $quantity3 = 1;
 
 // T0D0: 定数：割引率
-const DISCOUNT_RATE = 0;
-const POINT_RATE = 0;
+const DISCOUNT_RATE = 0.05;
+const POINT_RATE = 0.05;
+// DISCOUNT_RATE = 0.01;
 
 // 演算
 // TODO: quantity1をインクリメント
