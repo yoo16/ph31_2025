@@ -57,7 +57,7 @@ $discount = $total * $discountRate;
 $totalWithDiscount = $total - $discount;
 
 // 獲得ポイント: totalWithDiscount x POINT_RATE (小数点切り下げ)
-$point = 0;
+$point = $totalWithDiscount * POINT_RATE;
 ?>
 
 <!DOCTYPE html>
