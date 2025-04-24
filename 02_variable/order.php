@@ -48,7 +48,7 @@ $isMember = true;
 $memberLabel = ($isMember) ? "会員" : "非会員";
 
 // TODO: 会員の場合、割引率を DISCOUNT_RATE に設定
-$discountRate = 0;
+$discountRate = ($isMember) ? DISCOUNT_RATE : 0;
 
 // 割引額
 $discount = $total * $discountRate;
