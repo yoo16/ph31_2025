@@ -1,6 +1,9 @@
 <?php
 // 変数
 // TODO: drink1, drink2, drink3に商品名を代入
+$drink1 = "コーラ";
+$drink2 = "オレンジジュース";
+$drink3 = "紅茶";
 
 // TODO: image1, image2, image3に画像ファイル名を代入
 
