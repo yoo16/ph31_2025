@@ -27,8 +27,10 @@ const POINT_RATE = 0.05;
 
 // 演算
 // TODO: quantity1をインクリメント
+$quantity1++;
 
-// TODO: quantity3をデクリメント
+// TODO: quantity2をデクリメント
+$quantity2--;
 
 // TODO: amount1, amount2, amount3に「価格 x 個数」を代入
 $amount1 = 0;
@@ -81,8 +83,8 @@ $point = 0;
                 <div class="p-4">
                     <h2 class="font-bold mb-2"><?= $drink1; ?></h2>
                     <p>
-                        &yen;<?= $price1; ?> 
-                        x 
+                        &yen;<?= $price1; ?>
+                        x
                         <?= $quantity1 ?>
                     </p>
                 </div>
@@ -92,8 +94,8 @@ $point = 0;
                 <div class="p-4">
                     <h2 class="font-bold mb-2"><?= $drink2; ?></h2>
                     <p>
-                        &yen;<?= $price2; ?> 
-                        x 
+                        &yen;<?= $price2; ?>
+                        x
                         <?= $quantity2 ?>
                     </p>
                 </div>
@@ -103,8 +105,8 @@ $point = 0;
                 <div class="p-4">
                     <h2 class="font-bold mb-2"><?= $drink3; ?></h2>
                     <p>
-                        &yen;<?= $price3; ?> 
-                        x 
+                        &yen;<?= $price3; ?>
+                        x
                         <?= $quantity3 ?>
                     </p>
                 </div>
