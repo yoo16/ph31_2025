@@ -17,6 +17,6 @@ $title = "マイページ";
 </head>
 <body>
     <h1>こんにちはー</h1>
-    <?php echo $message; ?>
+    <?php echo $message ?>
 </body>
 </html>
