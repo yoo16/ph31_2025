@@ -2,17 +2,24 @@
 // TODO: range() で 各列のビンゴ番号の範囲作成
 $ranges = [
     // TODO: B:1-15
+    range(1, 15),
     // TODO: I:16-30
+    range(16, 30),
     // TODO: N:31-45
+    range(31, 45),
     // TODO: G:46-60
+    range(46, 60),
     // TODO: O:61-75
+    range(61, 75),
 ];
 
 $columns = [];
 // TODO: foreach で ranges を繰り返し
+foreach ($ranges as $range) {
     // TODO: 配列をシャッフル: shuffle($range)
+    var_dump($range);
     // TODO: 5つ選んで、$column[] に追加: array_slice($range, 0, 5)
-
+}
 // TODO: 中央を(3, 3) を「FREE」の文字に置き換え
 
 // ビンゴカードのラベル
