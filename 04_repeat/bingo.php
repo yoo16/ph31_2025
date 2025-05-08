@@ -17,8 +17,10 @@ $columns = [];
 // TODO: foreach で ranges を繰り返し
 foreach ($ranges as $range) {
     // TODO: 配列をシャッフル: shuffle($range)
-    var_dump($range);
+    shuffle($range);
+    // var_dump($range);
     // TODO: 5つ選んで、$column[] に追加: array_slice($range, 0, 5)
+    $columns[] = array_slice($range, 0, 5);
 }
 // TODO: 中央を(3, 3) を「FREE」の文字に置き換え
 
