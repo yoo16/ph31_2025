@@ -21,9 +21,12 @@ $isAuth = false;
             <li><a href="">Contact</a></li>
             <li><a href="">Products</a></li>
             <!-- TODO: endif で分岐 -->
-            <li><a href="">My Page</a></li>
-            <li><a href="">Logout</a></li>
-            <li><a href="">Sign in</a></li>
+            <?php if ($isAuth) : ?>
+                <li><a href="">My Page</a></li>
+                <li><a href="">Logout</a></li>
+            <?php else : ?>
+                <li><a href="">Sign in</a></li>
+            <?php endif; ?>
         </ul>
     </nav>
 </body>
