@@ -1,7 +1,7 @@
 <?php
 $drinks = ['コーヒー', '紅茶', 'ほうじ茶'];
 // TODO: 商品選択
-$selected = "";
+$selected = $drinks[1];
 ?>
 
 <!DOCTYPE html>
