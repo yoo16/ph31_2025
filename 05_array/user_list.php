@@ -53,9 +53,9 @@ $users = [
                     <?php foreach ($users as $user): ?>
                         <tr class="hover:bg-gray-100">
                             <td class="px-4 py-2 border border-gray-300"><?= $user['id'] ?></td>
-                            <td class="px-4 py-2 border border-gray-300"></td>
-                            <td class="px-4 py-2 border border-gray-300"></td>
-                            <td class="px-4 py-2 border border-gray-300"></td>
+                            <td class="px-4 py-2 border border-gray-300"><?= $user['account_name'] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?= $user['display_name'] ?></td>
+                            <td class="px-4 py-2 border border-gray-300"><?= $user['email'] ?></td>
                         </tr>
                     <?php endforeach ?>
                 <?php endif ?>
