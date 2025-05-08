@@ -13,9 +13,9 @@ $length3 = mb_strlen($message3);
 
 $address = "東京都新宿区新宿";
 // TODO: 0から3文字目まで取得
-$address1 = mb_substr($address, 0, 0);
+$address1 = mb_substr($address, 0, 3);
 // TODO: 3文字目から3文字取得
-$address2 = mb_substr($address, 0, 0);
+$address2 = mb_substr($address, 3, 3);
 // TODO: 最後の2文字取得
 $address3 = mb_substr($address, 0);
 ?>
