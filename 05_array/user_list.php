@@ -50,12 +50,14 @@ $users = [
             <tbody>
                 <?php if ($users): ?>
                     <!-- TODO: foreach 文を使ってユーザデータ表示 -->
+                    <?php foreach ($users as $user): ?>
                         <tr class="hover:bg-gray-100">
                             <td class="px-4 py-2 border border-gray-300"></td>
                             <td class="px-4 py-2 border border-gray-300"></td>
                             <td class="px-4 py-2 border border-gray-300"></td>
                             <td class="px-4 py-2 border border-gray-300"></td>
                         </tr>
+                    <?php endforeach ?>
                 <?php endif ?>
             </tbody>
         </table>
