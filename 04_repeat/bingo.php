@@ -1,15 +1,15 @@
 <?php
 // TODO: range() で 各列のビンゴ番号の範囲作成
 $ranges = [
-    // TODO: B:1-15
+    // TODO: 1行目 :1-15
     range(1, 15),
-    // TODO: I:16-30
+    // TODO: 2行目 :16-30
     range(16, 30),
-    // TODO: N:31-45
+    // TODO: 3行目 :31-45
     range(31, 45),
-    // TODO: G:46-60
+    // TODO: 4行目 :46-60
     range(46, 60),
-    // TODO: O:61-75
+    // TODO: 5行目 :61-75
     range(61, 75),
 ];
 
