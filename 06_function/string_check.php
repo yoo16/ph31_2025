@@ -1,15 +1,15 @@
 <?php 
 $message1 = "Hello";
 // TODO: 文字の長さを取得: strlen()はバイト数を返す
-$length1 = 0;
+$length1 = strlen($message1);
 
 $message2 = "こんにちは";
 // TODO: 文字の長さを取得: strlen()はバイト数を返す
-$length2 = 0;
+$length2 = strlen($message2);
 
 $message3 = "こんにちは";
 // TODO: マルチバイト文字の長さを取得: mb_strlen()は文字数を返す
-$length3 = 0;
+$length3 = mb_strlen($message3);
 
 $address = "東京都新宿区新宿";
 // TODO: 0から3文字目まで取得
