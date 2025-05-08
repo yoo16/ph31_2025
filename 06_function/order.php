@@ -23,6 +23,9 @@ function calculateTotalPrice(array $products)
 {
     $total = 0;
     // TODO: 合計金額を計算
+    foreach ($products as $product) {
+        $total += $product['price'];
+    }
     return $total;
 }
 
