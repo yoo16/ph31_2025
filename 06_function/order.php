@@ -34,7 +34,7 @@ function calculateTotalPrice(array $products)
 function calculatePoint(int $price, float $rate = 0.1)
 {
     // TODO: ポイント計算
-    $point = 0;
+    $point = $price * $rate;
     return $point;
 }
 
