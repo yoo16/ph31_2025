@@ -23,6 +23,7 @@ foreach ($ranges as $range) {
     $columns[] = array_slice($range, 0, 5);
 }
 // TODO: 中央を(3, 3) を「FREE」の文字に置き換え
+$columns[2][2] = 'FREE';
 
 // ビンゴカードのラベル
 $labels = ['B', 'I', 'N', 'G', 'O'];
