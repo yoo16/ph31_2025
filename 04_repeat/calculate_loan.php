@@ -31,9 +31,10 @@ while ($loan > 0) {
     $month++;
 
     // TODO: 利息 = ローン x 金利 / 12
-    $interest = 0;
+    $interest = $loan * ($interest_rate / 100) / 12;
 
     // TODO: ローン残高 - (月支払い - 利息)
+    $loan = $loan - ($pay_by_month - $interest);
 
     // 合計利息計算
     $total_interest += $interest;
