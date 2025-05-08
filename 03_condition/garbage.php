@@ -1,8 +1,8 @@
 <?php
 // 曜日
-$week_index = 1;
+// $week_index = 5;
 // 今日の曜日のインデックス
-// $week_index = date("w");
+$week_index = date("w");
 // 曜日データ
 // $week = ["日", "月", "火", "水", "木", "金", "土"];
 $week_day = "";
@@ -18,7 +18,6 @@ switch ($week_index) {
     case 5:
         $garbage = "燃えないゴミ";
         break;
-
     default:
         $garbage = "回収なし";
         break;
