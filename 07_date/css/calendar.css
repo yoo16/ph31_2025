@@ -1,0 +1,16 @@
+table {
+    border-spacing: 0;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+}
+
+.sunday {
+    background: pink;
+}
+
+.saturday {
+    background: lightblue;
+}
