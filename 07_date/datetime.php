@@ -15,9 +15,11 @@ $date_string1 = $date1->format('Y-m-d H:i:s');
 // 日付2を設定し、1日加算
 $date2 = new DateTime();
 // TODO: 2022年3月10日10時30分45秒を設定
+$date2 = clone $date1;
 // TODO: 1日加算: modify('+1 day')
+$date2->modify('+28 day');
 // TODO: format(): Y-m-d H:i:s
-$date_string2 = "";
+$date_string2 = $date2->format('Y-m-d H:i:s');
 
 // TODO: 日付1と日付2を比較
 $is_match = ($date1 < $date2);
