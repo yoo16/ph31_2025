@@ -2,13 +2,15 @@
 // タイムゾーンの設定
 date_default_timezone_set('Asia/Tokyo');
 
-// TODO: 現在の日付と時刻を取得
+// 現在の日付と時刻を取得
 $date1 = new DateTime();
 
 // 2022年3月10日10時30分45秒を設定
 // TODO: setDate(), setTime() メソッドを使用
+$date1->setDate(2022, 3, 10);
+$date1->setTime(10, 30, 45);
 // TODO: format(): Y-m-d H:i:s
-$date_string1 = "";
+$date_string1 = $date1->format('Y-m-d H:i:s');
 
 // 日付2を設定し、1日加算
 $date2 = new DateTime();
