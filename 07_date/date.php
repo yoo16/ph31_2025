@@ -31,7 +31,7 @@ $next_hour_time = strtotime('+3 hour');
 $next_hour = date('Y/m/d H:i:s', $next_hour_time);
 
 // TODO: 次の日曜日のタイムスタンプ(+1 sunday)
-$next_week_time = strtotime('');
+$next_week_time = strtotime('+1 sunday');
 $next_week = date('Y/m/d H:i:s', $next_week_time);
 ?>
 
