@@ -1,6 +1,6 @@
 <?php 
 // TODO: GETデータの取得
-$queries;
+$queries = $_GET;
 ?>
 <!DOCTYPE html>
 <html lang="ja">
