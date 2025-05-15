@@ -11,12 +11,16 @@ $month = $_GET['month'] ?? $date->format('m');
 
 // 月の最初の日を作成
 // TODO: setDate() メソッドで指定した年月の最初の日を作成
+// xxxx年xx月1日
+$date->setDate($year, $month, 1);
 
 // 今月の年月に基づく DateTime オブジェクト
 // 前月
 // TODO: $date を clone して、１ヶ月前を作成: modify('-1 month')
+$prev_month = (clone $date)->modify('-1 month');
 // 翌月
 // TODO: $date を clone して、１ヶ月後を作成: modify('+1 month')
+$next_month = (clone $date)->modify('+1 month');
 
 // カレンダーのセルを作成
 $calendar_cells = createCells($date);
