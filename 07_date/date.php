@@ -19,15 +19,15 @@ $days = date('t');
 $today_string = date('Y/m/d H:i:s');
 
 // TODO: 1日後のタイムスタンプ (+1 day)
-$next_day_time = strtotime('');
+$next_day_time = strtotime('+1 day');
 $next_day = date('Y/m/d', $next_day_time);
 
 // TODO: 3ヶ月前のタイムスタンプ(-3 month)
-$prev_day_time = strtotime('');
+$prev_day_time = strtotime('-3 month');
 $prev_day = date('Y/m/d', $prev_day_time);
 
 // TODO: 3時間後のタイムスタンプ(+3 hour)
-$next_hour_time = strtotime('');
+$next_hour_time = strtotime('+3 hour');
 $next_hour = date('Y/m/d H:i:s', $next_hour_time);
 
 // TODO: 次の日曜日のタイムスタンプ(+1 sunday)
