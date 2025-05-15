@@ -23,6 +23,10 @@ $date_string2 = $date2->format('Y-m-d H:i:s');
 
 // TODO: 日付1と日付2を比較
 $is_match = ($date1 < $date2);
+
+// TODO: 差分を取得（日数）
+$interval = $date1->diff($date2);
+$days_diff = $interval->days; // 絶対値での日数差
 ?>
 
 <!DOCTYPE html>
@@ -63,6 +67,13 @@ $is_match = ($date1 < $date2);
                     <h3 class="text-lg font-medium">比較結果（date1 &lt; date2）</h3>
                     <p class="<?= $is_match ? 'text-green-600 font-bold' : 'text-red-600 font-bold' ?>">
                         <?= $is_match ? 'true（date1はdate2より前）' : 'false（date1はdate2と同じか後）' ?>
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-medium">日数差</h3>
+                    <p class="<?= $days_diff > 0 ? 'text-green-600 font-bold' : 'text-red-600 font-bold' ?>">
+                        <?= $days_diff ?>日
                     </p>
                 </div>
             </div>
