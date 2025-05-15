@@ -16,7 +16,7 @@ $month = date('m');
 // TODO: 月の日数(t)
 $days = date('t');
 // TODO: 現在の日付と時刻(Y/m/d H:i:s)
-$today_string = "";
+$today_string = date('Y/m/d H:i:s');
 
 // TODO: 1日後のタイムスタンプ (+1 day)
 $next_day_time = strtotime('');
