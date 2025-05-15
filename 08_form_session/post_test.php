@@ -3,6 +3,7 @@ $posts = [];
 // POSTリクエストの場合
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // TODO: POSTデータの取得
+    // TODO: サニタイズ（消毒）
     $posts = $_POST;
     // var_dump($_POST['email']);
     // var_dump($_POST['password']);
