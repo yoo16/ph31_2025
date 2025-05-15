@@ -10,11 +10,11 @@ $day = 7;
 $next_time = $now_time + (24 * 60 * 60 * $day);
 
 // TODO: 年(Y)
-$year = 0;
+$year = date('Y');
 // TODO: 月(m)
-$month = 0;
+$month = date('m');
 // TODO: 月の日数(t)
-$days = 0;
+$days = date('t');
 // TODO: 現在の日付と時刻(Y/m/d H:i:s)
 $today_string = "";
 
