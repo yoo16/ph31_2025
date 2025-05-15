@@ -1,5 +1,6 @@
 <?php
 // TODO: セッションの開始
+session_start();
 
 // TODO: regenerate_id()を使ってセッションIDを再生成する
 
@@ -12,8 +13,10 @@ if (isset($_GET['is_clear'])) {
 // カウントをインクリメント
 if (isset($_SESSION['count'])) {
     // TODO: ここでカウントをインクリメントする
+    $_SESSION['count']++;
 } else {
     // TODO: ここでカウントを初期化(0)する
+    $_SESSION['count'] = 0;
 }
 $count = $_SESSION['count'] ?? 0;
 ?>
