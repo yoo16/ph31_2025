@@ -1,6 +1,8 @@
 <?php 
 // TODO: GETデータの取得
 $queries = $_GET;
+// var_dump($_GET['keyword']);
+// var_dump($_GET['category']);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
