@@ -9,6 +9,7 @@ session_start();
 // セッションクリア処理
 if (isset($_GET['is_clear'])) {
     // TODO: ここでセッションをクリアする
+    unset($_SESSION['count']);
 }
 // カウントをインクリメント
 if (isset($_SESSION['count'])) {
