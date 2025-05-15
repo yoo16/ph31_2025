@@ -7,7 +7,7 @@ $now_time = time();
 // TODO: x日後のタイムスタンプ
 // 現在の時間 + 24時間 * 60分 * 60秒 * 日数
 $day = 7;
-$next_time = $now_time;
+$next_time = $now_time + (24 * 60 * 60 * $day);
 
 // TODO: 年(Y)
 $year = 0;
