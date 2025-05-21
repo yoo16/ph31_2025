@@ -4,6 +4,8 @@ const SITE_TITLE = "My Page";
 
 // BASE_URL を定義（常にルートからの相対パス）
 define('BASE_URL', getBaseUrl());
+// BASE_URL のカスタマイズ
+// const BASE_URL = "http://localhost/myproject/";
 
 // パス設定
 const BASE_DIR = __DIR__;
@@ -13,9 +15,6 @@ const VIEW_DIR = APP_DIR . "views/";
 const MODEL_DIR = APP_DIR . "models/";
 const LAYOUT_DIR = VIEW_DIR . "layouts/";
 const COMPONENT_DIR = APP_DIR . "components/";
-
-// BASE_URL のカスタマイズ
-// const BASE_URL = "http://localhost/myproject/";
 
 // セッションの開始
 session_start();

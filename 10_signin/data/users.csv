@@ -1,0 +1,4 @@
+"id","name","email","image","password"
+1,"User1","user1@test.com","images/users/1.png","$2y$10$Mp41sHgRTvkX7doKxwmvu.PmWb638HA8QIKsz6RXi1ZWq3Ru5xPlW"
+2,"User2","user2@test.com","images/users/2.png","$2y$10$Mp41sHgRTvkX7doKxwmvu.PmWb638HA8QIKsz6RXi1ZWq3Ru5xPlW"
+3,"User3","user3@test.com","images/users/3.png","$2y$10$Mp41sHgRTvkX7doKxwmvu.PmWb638HA8QIKsz6RXi1ZWq3Ru5xPlW"
