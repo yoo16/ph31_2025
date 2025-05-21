@@ -99,6 +99,29 @@ $auth_user = AuthUser::check();
                         <td class="p-2">パス、セッション開始、モデル読み込みなど</td>
                     </tr>
                     <tr class="border-b">
+                        <td class="p-2">images/users/{id}.png</td>
+                        <td class="p-2">ユーザプロフィール画像</td>
+                        <td class="p-2">PNGファイル、users.id と連携</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="p-2">data/users.csv</td>
+                        <td class="p-2">ユーザデータファイル</td>
+                        <td class="p-2">CSVファイル</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="py-4 text-xl font-semibold">コンポーネントファイル</h3>
+            <table class="text-xs w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr class="text-left bg-gray-200">
+                        <th class="p-2">ファイル名</th>
+                        <th class="p-2">説明</th>
+                        <th class="p-2">その他</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
                         <td class="p-2">components/head.php</td>
                         <td class="p-2">HTML `head` コンポーネント</td>
                         <td class="p-2"></td>
@@ -113,26 +136,28 @@ $auth_user = AuthUser::check();
                         <td class="p-2">エラーメッセージ表示</td>
                         <td class="p-2">セッションのメッセージがあれば表示</td>
                     </tr>
-                    <tr class="border-b">
-                        <td class="p-2">images/users/{id}.png</td>
-                        <td class="p-2">ユーザプロフィール画像</td>
-                        <td class="p-2">PNGファイル、users.id と連携</td>
+                </tbody>
+            </table>
+
+            <h3 class="py-4 text-xl font-semibold">モデルファイル</h3>
+            <table class="text-xs w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr class="text-left bg-gray-200">
+                        <th class="p-2">ファイル名</th>
+                        <th class="p-2">説明</th>
+                        <th class="p-2">その他</th>
                     </tr>
-                    <tr class="border-b">
-                        <td class="p-2">data/users.csv</td>
-                        <td class="p-2">ユーザデータファイル</td>
-                        <td class="p-2">CSVファイル</td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="p-2">app/models/User.php</td>
-                        <td class="p-2">ユーザモデル</td>
-                        <td class="p-2">ユーザデータ操作（読み込み、認証など）</td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="p-2">app/models/AuthUser.php</td>
-                        <td class="p-2">認証ユーザモデル</td>
-                        <td class="p-2">ユーザセッション管理、Userモデルを継承</td>
-                    </tr>
+                </thead>
+                <tr class="border-b">
+                    <td class="p-2">app/models/User.php</td>
+                    <td class="p-2">ユーザモデル</td>
+                    <td class="p-2">ユーザデータ操作（読み込み、認証など）</td>
+                </tr>
+                <tr class="border-b">
+                    <td class="p-2">app/models/AuthUser.php</td>
+                    <td class="p-2">認証ユーザモデル</td>
+                    <td class="p-2">ユーザセッション管理、Userモデルを継承</td>
+                </tr>
                 </tbody>
             </table>
 
