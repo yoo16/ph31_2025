@@ -37,7 +37,7 @@ if (empty($auth_user['id'])) {
     AuthUser::set($auth_user);
     // $_SESSION['auth_user'] = $auth_user;
 
-    // TODO: トップページにリダイレクト
+    // TODO: ユーザホームにリダイレクト
     header('Location: ../home/');
     exit;
 }
