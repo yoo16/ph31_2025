@@ -14,7 +14,7 @@ if (isset($_SESSION['signin'])) {
 $error = "";
 if (isset($_SESSION['error'])) {
     // TODO: セッション(error)からエラーメッセージを取得
-    $error = "";
+    $error = $_SESSION['error'];
     unset($_SESSION['error']);
 }
 ?>
