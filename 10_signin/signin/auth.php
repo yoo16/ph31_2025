@@ -11,8 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $_SESSION['signin'] = [];
 
 // TODO: POSTリクエストされた email と password を取得
-$email = "";
-$password = "";
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+// デバッグ用
+// var_dump($email, $password);
+// 強制的にプログラム終了
+// exit;
 
 // TODO: ユーザ認証: new User() で auth() を実行
 $user = new User();
