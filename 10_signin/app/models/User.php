@@ -60,6 +60,9 @@ class User
         // ユーザ情報をメールアドレスで取得
         $user = $this->findByEmail($email);
         // TODO: password_verify()関数を使用して、パスワードとハッシュを比較
+        if ($user && password_verify($password, $user['password'])) {
+            return $user;
+        }
     }
 
 }
