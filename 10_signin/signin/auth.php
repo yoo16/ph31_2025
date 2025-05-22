@@ -38,5 +38,6 @@ if (empty($auth_user['id'])) {
     // $_SESSION['auth_user'] = $auth_user;
 
     // TODO: トップページにリダイレクト
+    header('Location: ../home/');
     exit;
 }
