@@ -4,13 +4,16 @@ require_once "models/Cat.php";
 require_once "models/Dog.php";
 
 // TODO: Animalインスタンス生成
-$animal = null;
+$animal = new Animal("ジロー");
 // TODO: Animal の type 設定
+$animal->type = "lion";
 // TODO: Animal の crying 設定
+$animal->crying = "がおー！";
 
 // TODO: Catインスタンス生成: 名前を指定
-$cat1 = null;
+$cat1 = new Cat("タマ");
 // TODO: Catインスタンスの image プロパティに画像のパスを指定: images/cat1.png
+$cat1->image = "images/cat1.png";
 
 $cat2 = new Cat("ミケ");
 $cat2->image = "images/cat2.png";
@@ -48,16 +51,16 @@ $animals = [
                 <div class="my-2">
                     <label class="text-xs px-3 py-1 bg-green-500 text-white rounded">
                         <!-- TODO: animal.name 表示 -->
-                        <?= "" ?>
+                        <?= $animal->name ?>
                         <!-- TODO: animal.type 表示 -->
-                        (<?= "" ?>)
+                        (<?= $animal->type ?>)
                     </label>
                 </div>
                 <div>
                     <!-- TODO: animal.cry() 実行 -->
-                    <?php  ?><br>
+                    <?php $animal->cry() ?><br>
                     <!-- TODO: animal.run() 実行 -->
-                    <?php  ?>
+                    <?php $animal->run() ?><br>
                 </div>
             </div>
         </div>
@@ -68,7 +71,7 @@ $animals = [
             <div class="bg-white p-4 rounded shadow-md">
                 <div class="my-2 flex items-center space-x-4">
                     <!-- TODO: dog1.image を表示 -->
-                    <img src="" class="w-16 h-16 rounded-full">
+                    <img src="<?= $dog1->image ?>" class="w-16 h-16 rounded-full">
                     <label class="text-xs px-3 py-1 bg-green-500 text-white rounded">
                         <?= $dog1->name ?>
                         (<?= $dog1->type ?>)
@@ -78,7 +81,7 @@ $animals = [
                     <?php $dog1->cry() ?><br>
                     <?php $dog1->run() ?><br>
                     <!-- TODO: dog1.eat() 実行 -->
-                    <?php  ?><br>
+                    <?php $dog1->eat('お肉') ?><br>
                 </div>
             </div>
         </div>
@@ -96,9 +99,9 @@ $animals = [
                 <div>
                     <?php $cat2->cry() ?><br>
                     <!-- TODO: cat2.greet() 実行 -->
-                    <?php  ?><br>
+                    <?php $cat2->greet($dog1) ?><br>
                     <!-- TODO: cat2.eat() 実行 -->
-                    <?php  ?><br>
+                    <?php $cat2->eat('チャウチュール')  ?><br>
                 </div>
             </div>
         </div>

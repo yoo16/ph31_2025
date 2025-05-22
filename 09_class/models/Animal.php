@@ -18,6 +18,8 @@ class Animal implements IAnimal, GameCharacterable
     public string $type;
     // 鳴き声
     public string $crying;
+    // 鳴き声
+    public string $image;
 
     // クラスメソッド
     public function run()
