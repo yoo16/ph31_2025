@@ -6,7 +6,7 @@ require_once "../app.php";
 $form = [];
 if (isset($_SESSION['signin'])) {
     // TODO: セッション(signin)から入力データを取得
-    $form = [];
+    $form = $_SESSION['signin'];
     unset($_SESSION['signin']);
 }
 

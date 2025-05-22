@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // TODO: セッションにPOSTデータを登録
-$_SESSION['signin'] = [];
+$_SESSION['signin'] = $_POST;
 
 // TODO: POSTリクエストされた email と password を取得
 $email = $_POST['email'];
