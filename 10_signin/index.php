@@ -2,6 +2,7 @@
 // 共通ファイル app.php を読み込み
 require_once 'app.php';
 
+// ユーザがログインしているかどうかを確認
 $auth_user = AuthUser::check();
 ?>
 
@@ -9,6 +10,7 @@ $auth_user = AuthUser::check();
 <html lang="ja">
 
 <!-- TODO: コンポーネント: components/head.php -->
+<?php include COMPONENT_DIR . "head.php" ?>
 
 <body>
     <!-- TODO: コンポーネント: components/nav.php -->
