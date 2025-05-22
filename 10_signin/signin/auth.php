@@ -23,6 +23,9 @@ $password = $_POST['password'];
 $user = new User();
 $auth_user = $user->auth($email, $password);
 
+// ユーザデータをデバッグ表示
+// var_dump($auth_user);
+
 if (empty($auth_user['id'])) {
     // エラーセッション
     $_SESSION['error'] = 'メールアドレスまたはパスワードが間違っています。';
@@ -31,6 +34,8 @@ if (empty($auth_user['id'])) {
     exit;
 } else {
     // TODO: 認証成功時はセッションにユーザデータ($auth_user) を保存: AuthUser::set()
+    AuthUser::set($auth_user);
+    // $_SESSION['auth_user'] = $auth_user;
 
     // TODO: トップページにリダイレクト
     exit;
