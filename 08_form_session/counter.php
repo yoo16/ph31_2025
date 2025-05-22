@@ -3,6 +3,7 @@
 session_start();
 
 // TODO: regenerate_id()を使ってセッションIDを再生成する
+session_regenerate_id(true);
 
 // TODO: セッションID取得
 
