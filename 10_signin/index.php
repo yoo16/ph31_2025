@@ -14,6 +14,7 @@ $auth_user = AuthUser::check();
 
 <body>
     <!-- TODO: コンポーネント: components/nav.php -->
+    <?php include COMPONENT_DIR . "nav.php" ?>
 
     <main class="min-h-screen flex flex-col justify-center items-center">
 
