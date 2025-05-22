@@ -7,6 +7,9 @@ $auth_user = AuthUser::check();
 
 if (empty($auth_user)) {
     // TODO: ログインしていない場合はログイン画面にリダイレクト
+    header('Location: ../signin/');
+    // 強制終了
+    exit;
 }
 ?>
 
