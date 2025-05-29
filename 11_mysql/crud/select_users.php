@@ -12,7 +12,7 @@ function get($limit = 50)
     // DB接続
     $pdo = Database::getInstance();
     // TODO: SQL作成：users テーブルから50件取得
-    $sql = "";
+    $sql = "SELECT * FROM users LIMIT {$limit}";
     // queryメソッドでSQLを query() で実行し、PDOStatementオブジェクトを取得
     $stmt = $pdo->query($sql);
     // TODO: Userデータを全件取得: fetchAll(PDO::FETCH_ASSOC)
