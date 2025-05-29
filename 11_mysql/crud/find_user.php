@@ -16,7 +16,7 @@ function find($id)
 
     // 1) プリペアードステートメントで実行
     // TODO: SQL文（プレースホルダ）
-    $sql = "";
+    $sql = "SELECT * FROM users WHERE id = :id;";
 
     try {
         // TODO: SQL事前準備
