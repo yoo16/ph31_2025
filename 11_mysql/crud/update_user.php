@@ -16,11 +16,13 @@ function update($id, $password)
 {
     try {
         // TODO: パスワードハッシュ化
-        $hash = "";
+        $hash = password_hash($password, PASSWORD_DEFAULT);
         // DB接続
         $pdo = Database::getInstance();
         // TODO: SQL作成： 指定した id で検索して users.password を更新
-        $sql = "";
+        $sql = "UPDATE users 
+                SET password = :password 
+                WHERE id = :id;";
         // SQL事前準備
         $stmt = $pdo->prepare($sql);
         // SQL実行: id, password パラメータ
