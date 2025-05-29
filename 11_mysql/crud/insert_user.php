@@ -17,7 +17,7 @@ function insert($posts)
         $posts['password'] = password_hash($posts['password'], PASSWORD_DEFAULT);
         // DB接続
         $pdo = Database::getInstance();
-        // SQL作成： users にレコード挿入
+        // TODO: SQL作成： users にレコード挿入
         $sql = "INSERT INTO users (account_name, email, display_name, password) 
                 VALUES (:account_name, :email, :display_name, :password)";
 
