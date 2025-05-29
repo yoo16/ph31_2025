@@ -5,7 +5,7 @@ require_once '../env.php';
 require_once '../lib/Database.php';
 
 // TODO: PDOインスタンスを取得
-// $pdo = Database::getInstance();
+$pdo = Database::getInstance();
 ?>
 
 <!DOCTYPE html>
