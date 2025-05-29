@@ -14,11 +14,12 @@ function insert($posts)
 {
     try {
         // TODO: パスワードハッシュ化
-        $posts['password'] = "";
+        $posts['password'] = password_hash($posts['password'], PASSWORD_DEFAULT);
         // DB接続
         $pdo = Database::getInstance();
         // SQL作成： users にレコード挿入
-        $sql = "";
+        $sql = "INSERT INTO users (account_name, email, display_name, password) 
+                VALUES (:account_name, :email, :display_name, :password)";
 
         // TODO: SQLを設定して、プリペアードステートメントを生成
         $stmt = null;
