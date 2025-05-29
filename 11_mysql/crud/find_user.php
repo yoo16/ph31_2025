@@ -22,7 +22,8 @@ function find($id)
         // TODO: SQL事前準備
         $stmt = $pdo->prepare($sql);
         // TODO: SQL実行：:id のパラメータを引数
-        $stmt->execute();
+        // $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute(['id' => $id]);
 
         // 2) SQLインジェクションの脆弱性がある実行
         // '' OR 1=1;-- などの文字列を入力すると全ユーザが取得される
