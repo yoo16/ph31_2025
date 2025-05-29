@@ -22,9 +22,10 @@ function insert($posts)
                 VALUES (:account_name, :email, :display_name, :password)";
 
         // TODO: SQLを設定して、プリペアードステートメントを生成
-        $stmt = null;
+        $stmt = $pdo->prepare($sql);
         // TODO: SQL実行: execute() に $posts を渡す
-        $result = null;
+        $result = $stmt->execute($posts);
+
         // 成功した場合は、登録したユーザのIDを取得
         if ($result) {
             // 登録した users.id を取得
