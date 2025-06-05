@@ -12,10 +12,19 @@ function getByUserID($user_id, $limit = 10)
 {
     $pdo = Database::getInstance();
     // TODO: SQL作成: ユーザIDに紐づくツイートを取得
-    $sql = "";
+    $sql = "SELECT 
+                tweets.id, 
+                users.display_name, 
+                tweets.message, 
+                tweets.created_at
+            FROM tweets
+            JOIN users ON tweets.user_id = users.id
+            WHERE tweets.user_id = :user_id
+            ORDER BY tweets.created_at DESC
+            LIMIT :limit";
 
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(['user_id' => $user_id]);
+    $stmt->execute(['user_id' => $user_id, 'limit' => $limit]);
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $rows;
 }
