@@ -31,7 +31,7 @@ class User
             // DB接続
             $pdo = Database::getInstance();
             // TODO: SQL作成: ユーザIDでユーザを検索
-            $sql = "";
+            $sql = "SELECT * FROM users WHERE id = :id";
             // SQLの準備
             $stmt = $pdo->prepare($sql);
             // SQLの実行
