@@ -17,7 +17,7 @@ $_SESSION[APP_KEY]['login'] = $_POST;
 $account_name = $_POST['account_name'];
 $password = $_POST['password'];
 // デバッグ用：確認したらコメントアウト
-var_dump($account_name, $password);
+// var_dump($account_name, $password);
 
 // TODO: ユーザ認証: new User() で auth() を実行
 $user = new User();
