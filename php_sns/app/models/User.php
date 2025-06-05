@@ -149,7 +149,8 @@ class User
             // DB接続
             $pdo = Database::getInstance();
             // TODO: SQL作成: アカウント名でユーザを検索
-            $sql = "";
+            $sql = "SELECT * FROM users 
+                    WHERE account_name = :account_name";
             // SQLの準備
             $stmt = $pdo->prepare($sql);
             // SQLの実行
@@ -157,9 +158,9 @@ class User
             // ユーザデータを取得
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
             // TODO: もしユーザが検索されたら、ハッシュパスワードを検証
-            if ($user) {
+            if ($user && password_verify($password, $user['password'])) {
                 // TODO: ユーザを返す
-                return;
+                return $user;
             }
         } catch (PDOException $e) {
             echo $e->getMessage();
