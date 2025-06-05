@@ -14,8 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $_SESSION[APP_KEY]['login'] = $_POST;
 
 // TODO: 入力されたアカウント名とパスワードを取得
-$account_name = "";
-$password = "";
+$account_name = $_POST['account_name'];
+$password = $_POST['password'];
 // デバッグ用：確認したらコメントアウト
 var_dump($account_name, $password);
 
