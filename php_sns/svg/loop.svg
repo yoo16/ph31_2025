@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="svg-loop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+	<style type="text/css">
+		.st0 {
+			fill: #8A9AA4;
+		}
+	</style>
+	<path class="st0"
+		d="M64,160h320v96l128-128L384,0v96H0v192h64V160z M448,352H128v-96L0,384l128,128v-96h384V224h-64V352z" />
+</svg>

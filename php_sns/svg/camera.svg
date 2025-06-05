@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    class="w-6 h-6">
+    <!-- カメラの本体 -->
+    <rect x="1" y="5" width="18" height="14" rx="2" ry="2" />
+    <!-- レンズ -->
+    <circle cx="12" cy="12" r="3.2" fill="white" />
+    <!-- フラッシュ部分 -->
+    <rect x="7" y="3" width="4" height="2" rx="1" />
+</svg>
