@@ -14,7 +14,7 @@ function delete($id)
         // DB接続
         $pdo = Database::getInstance();
         // TODO: SQL作成: 指定した id で検索してレコードを削除
-        $sql = "";
+        $sql = "DELETE FROM users WHERE id = :id;";
         // SQLを設定して、プリペアードステートメントを生成
         $stmt = $pdo->prepare($sql);
         // SQL実行
