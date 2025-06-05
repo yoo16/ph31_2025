@@ -10,10 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 // TODO: POSTデータ取得
-$posts = [];
+$posts = $_POST;
 
 // デバッグ用：確認したらコメントアウト
-var_dump($posts);
+// var_dump($posts);
 
 // セッションの APP_KEY 下の regist にPOSTデータを保存
 $_SESSION[APP_KEY]['regist'] = $posts;
