@@ -42,7 +42,7 @@ if (empty($auth_user['id'])) {
 } else {
     // TODO: 認証成功時はセッションにユーザデータを保存
     $_SESSION[APP_KEY]['auth_user'] = $auth_user;
-    // TODO: トップページにリダイレクト
+    // トップページにリダイレクト
     header('Location: ../../home/');
     exit;
 }
