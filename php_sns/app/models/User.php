@@ -90,8 +90,8 @@ class User
             // DB接続
             $pdo = Database::getInstance();
             // TODO: SQL作成: ユーザデータを挿入
-            $sql = "INSERT INTO users (account_name, email, password, display_name, profile) 
-                    VALUES (:account_name, :email, :password, :display_name, :profile)";
+            $sql = "INSERT INTO users (account_name, email, password, display_name) 
+                    VALUES (:account_name, :email, :password, :display_name)";
             // SQLの準備 
             $stmt = $pdo->prepare($sql);
             // SQLの実行
