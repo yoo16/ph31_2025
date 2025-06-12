@@ -17,12 +17,12 @@ use App\Models\User;
             <div class="flex items-center">
                 <a href="user/?id=<?= $value['user_id'] ?>" class="block no-underline text-inherit">
                     <!-- TODO: display_name -->
-                    <span class="font-bold text-gray-900"><?= "" ?></span>
+                    <span class="font-bold text-gray-900"><?= $value['display_name'] ?></span>
                 </a>
                 <!-- TODO: account_name -->
-                <span class="ml-2 text-gray-500">@<?= "" ?></span>
+                <span class="ml-2 text-gray-500">@<?= $value['account_name'] ?></span>
                 <!-- TODO: created_at -->
-                <span class="ml-2 text-gray-500 text-sm"><?= "" ?></span>
+                <span class="ml-2 text-gray-500 text-sm"><?= $value['created_at'] ?></span>
             </div>
 
             <!-- ツイート本文リンク -->
@@ -30,7 +30,7 @@ use App\Models\User;
                 <!-- メッセージ -->
                 <div class="mt-2 mb-2 text-gray-800">
                     <!-- TODO: message (HTML改行付き) -->
-                    <?= "" ?>
+                    <?= $value['message'] ?>
                 </div>
 
                 <!-- アップロード画像 -->
