@@ -1,2 +1,3 @@
 .DS_Store
 env.php
+php_sns/images/uploads/*

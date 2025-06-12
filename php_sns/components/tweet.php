@@ -37,7 +37,7 @@ use App\Models\User;
                 <?php if (File::has($value['image_path'])): ?>
                     <div class="mt-2">
                         <!-- TODO: image_path -->
-                        <img src="<?= "" ?>" class="rounded-lg max-w-lg max-h-96 object-cover" alt="">
+                        <img src="<?= $value['image_path'] ?>" class="rounded-lg max-w-lg max-h-96 object-cover" alt="">
                     </div>
                 <?php endif; ?>
             </a>
