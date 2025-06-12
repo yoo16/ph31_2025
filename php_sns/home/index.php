@@ -10,7 +10,8 @@ require_once('../app.php');
 $auth_user = AuthUser::checkLogin();
 
 // TODO: Tweet投稿一覧を取得: new Tweet() で get() を実行
-$tweets = [];
+$tweet = new Tweet();
+$tweets = $tweet->get();
 ?>
 
 <!DOCTYPE html>
