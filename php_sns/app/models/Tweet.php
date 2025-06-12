@@ -265,7 +265,7 @@ class Tweet
             // DB接続
             $pdo = Database::getInstance();
             // TODO: SQL: 投稿データを削除するSQL文
-            $sql = "";
+            $sql = "DELETE FROM tweets WHERE id = :id;";
             // SQLの準備
             $stmt = $pdo->prepare($sql);
             // SQLの実行

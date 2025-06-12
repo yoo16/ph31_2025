@@ -27,7 +27,7 @@ if ((int) $auth_user['id'] !== (int) $posts['user_id']) {
     exit;
 }
 
-// TODO: 投稿処理
+// TODO: 投稿削除処理
 $tweet = new Tweet();
 $tweet_id = $tweet->delete($posts['tweet_id']);
 
