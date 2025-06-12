@@ -30,7 +30,7 @@ use App\Models\User;
                 <!-- メッセージ -->
                 <div class="mt-2 mb-2 text-gray-800">
                     <!-- TODO: message (HTML改行付き) -->
-                    <?= $value['message'] ?>
+                    <?= nl2br($value['message']) ?>
                 </div>
 
                 <!-- アップロード画像 -->
