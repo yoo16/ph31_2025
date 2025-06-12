@@ -237,7 +237,8 @@ class Tweet
             $pdo = Database::getInstance();
             // TODO: SQL: 投稿データを INSERT するSQL文
             // user_id, message, image_path
-            $sql = "";
+            $sql = "INSERT INTO tweets (user_id, message, image_path) 
+                    VALUES (:user_id, :message, :image_path);";
             // SQLの準備
             $stmt = $pdo->prepare($sql);
             // SQLの実行

@@ -6,7 +6,7 @@ use App\Models\User;
     <!-- 1. URL: action=home/add/ -->
     <!-- 2. POSTメソッド: method=post -->
     <!-- 3. ファイルアップロード用: enctype=multipart/form-data -->
-    <form action="" method="" enctype="" class="p-3" >
+    <form action="home/add/" method="post" enctype="multipart/form-data" class="p-3" >
         <div class="px-1">
             <a href="user/">
                 <img id="preview-image" src="<?= User::profileImage($auth_user['profile_image']) ?>" class="w-8 h-8 object-cover rounded-full mb-4">
