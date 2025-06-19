@@ -125,7 +125,9 @@ class User
             // DB接続
             $pdo = Database::getInstance();
             // TODO: SQL作成: ユーザデータを更新
-            $sql = "";
+            $sql = "UPDATE users 
+                    SET display_name = :display_name, profile = :profile 
+                    WHERE id = :id";
             // SQLの準備
             $stmt = $pdo->prepare($sql);
             // SQLの実行
