@@ -1,10 +1,10 @@
 <?php
 // 共通ファイル app.php を読み込み
+// ../ は1つ上のディレクトリを指す
+require_once '../../app.php';
 
 use App\Models\AuthUser;
 use App\Models\Tweet;
-
-require_once('../app.php');
 
 // TODO: ユーザセッションの確認し、ログインしていない場合はログイン画面にリダイレクト
 $auth_user = AuthUser::checkLogin();
