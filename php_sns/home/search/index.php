@@ -32,6 +32,8 @@ $tweets = $tweet->search($keyword);
         </header>
 
         <main class="w-4/5 pt-3">
+            <?php include COMPONENT_DIR . 'search_form.php' ?>
+
             <div class="row">
                 <!-- TODO: components/tweet_form.php 読み込み -->
                 <?php include COMPONENT_DIR . 'tweet_form.php' ?>
