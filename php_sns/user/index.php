@@ -25,7 +25,7 @@ $tweet = new Tweet();
 $tweets = $tweet->getByUserID($user_data['id']);
 
 // TODO: 投稿件数をカウント
-$tweet_count = 0;
+$tweet_count = $tweet->countByUserID($auth_user['id']);
 ?>
 
 <!DOCTYPE html>
