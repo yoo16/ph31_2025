@@ -70,8 +70,9 @@ class Like
         try {
             // DB接続
             $pdo = Database::getInstance();
-            // いいねを追加するSQL文: tweet_id と user_id を指定してデータを挿入
-            $sql = "";
+            // TODO: いいねを追加するSQL文: tweet_id と user_id を指定してデータを挿入
+            $sql = "INSERT INTO likes (tweet_id, user_id) 
+                    VALUES (:tweet_id, :user_id)";
             // SQL事前準備
             $stmt = $pdo->prepare($sql);
             // SQL実行
