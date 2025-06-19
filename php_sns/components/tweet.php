@@ -26,13 +26,13 @@ use App\Models\User;
             </div>
 
             <!-- ツイート本文リンク -->
-            <a href="home/detail/?id=<?= $value['id'] ?>" class="block no-underline text-inherit">
-                <!-- メッセージ -->
-                <div class="mt-2 mb-2 text-gray-800">
-                    <!-- TODO: message (HTML改行付き) -->
-                    <?= nl2br($value['message']) ?>
-                </div>
+            <!-- メッセージ -->
+            <div class="mt-2 mb-2 text-gray-800">
+                <!-- TODO: message (HTML改行付き) -->
+                <?= nl2br($value['message']) ?>
+            </div>
 
+            <a href="home/detail/?id=<?= $value['id'] ?>" class="block no-underline text-inherit">
                 <!-- アップロード画像 -->
                 <?php if (File::has($value['image_path'])): ?>
                     <div class="mt-2">
