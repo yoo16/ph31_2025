@@ -38,3 +38,26 @@ function deleteTweet(target) {
     }
     target.closest('form').submit()
 }
+
+// ハッシュタグ
+document.addEventListener("DOMContentLoaded", function () {
+    // ハッシュタグリンク化
+    document.querySelectorAll(".tweet-message").forEach(el => {
+        const text = el.innerHTML;
+        // ハッシュタグ検出（日本語 + アルファベット + 数字 + _ に対応）
+        const linked = text.replace(/#([一-龯ぁ-んァ-ンー\w]+)/gu, function (match, tag) {
+            console.log(tag);
+            const url = `home/search/?keyword=%23${encodeURIComponent(tag)}`;
+            return `<a href="${url}" class="text-blue-500 hover:underline">${match}</a>`;
+        });
+        el.innerHTML = linked;
+
+        // 本文クリックで投稿詳細へ（ハッシュタグクリックは除外）
+        el.addEventListener("click", function (e) {
+            if (e.target.tagName.toLowerCase() !== 'a') {
+                const tweetId = el.dataset.id;
+                window.location.href = `home/detail/?id=${tweetId}`;
+            }
+        });
+    });
+});

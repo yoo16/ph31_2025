@@ -27,7 +27,7 @@ use App\Models\User;
 
             <!-- ツイート本文リンク -->
             <!-- メッセージ -->
-            <div class="mt-2 mb-2 text-gray-800">
+            <div class="mt-2 mb-2 text-gray-800 tweet-message">
                 <!-- TODO: message (HTML改行付き) -->
                 <?= nl2br($value['message']) ?>
             </div>
