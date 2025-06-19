@@ -30,6 +30,8 @@ $tweets = $tweet->get();
         </header>
 
         <main class="w-4/5 pt-3">
+            <?php include COMPONENT_DIR . 'search_form.php' ?>
+
             <div class="row">
                 <!-- components/tweet_form.php 読み込み -->
                 <?php include COMPONENT_DIR . 'tweet_form.php' ?>
