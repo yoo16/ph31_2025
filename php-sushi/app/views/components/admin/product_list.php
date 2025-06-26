@@ -13,7 +13,7 @@
                 <tr class="hover:bg-gray-50">
                     <td class="border px-4 py-2 space-x-2">
                         <!-- TODO: products.id GETパラメーターとする -->
-                        <a href="admin/product/edit.php?id=" class="text-blue-600 hover:underline">編集</a>
+                        <a href="admin/product/edit.php?id=<?= $product['id'] ?>" class="text-blue-600 hover:underline">編集</a>
                     </td>
                     <td class="border px-4 py-2">
                         <!-- TODO: products.image_path -->
