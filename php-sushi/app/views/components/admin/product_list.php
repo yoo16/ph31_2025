@@ -23,7 +23,7 @@
                     </td>
                     <td class="border px-4 py-2">
                         <!-- TODO: products.price -->
-                        000円
+                        <?= $product['price'] ?>円
                     </td>
                     <td class="border px-4 py-2">
                         <!-- TODO: $category_names を利用してカテゴリ名表示 -->
