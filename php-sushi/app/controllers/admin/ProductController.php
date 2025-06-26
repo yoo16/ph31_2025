@@ -26,7 +26,7 @@ class ProductController
         $categoryModel = new Category();
         $category_names = $categoryModel->map();
 
-        // Viewの表示
+        // Viewの表示: app/views/admin/product/index.php
         require VIEW_DIR . 'admin/product/index.php';
     }
 
