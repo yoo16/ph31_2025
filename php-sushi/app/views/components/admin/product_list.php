@@ -27,7 +27,7 @@
                     </td>
                     <td class="border px-4 py-2">
                         <!-- TODO: $category_names を利用してカテゴリ名表示 -->
-                        <?= $product['category_id'] ?>
+                        <?= $category_names[$product['category_id']] ?>
                     </td>
                 </tr>
             <?php endforeach; ?>
