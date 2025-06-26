@@ -54,7 +54,7 @@ class Product
     {
         try {
             // TODO: category_id で条件指定
-            $sql = "SELECT * FROM products";
+            $sql = "SELECT * FROM products WHERE category_id = :category_id";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute(['category_id' => $category_id]);
             return $stmt->fetchAll();
