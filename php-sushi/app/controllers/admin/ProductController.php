@@ -68,7 +68,6 @@ class ProductController
         $categoryModel = new Category();
         $category_names = $categoryModel->map();
 
-        var_dump($products);
         // Viewの表示
         require VIEW_DIR . 'admin/product/index.php';
     }
