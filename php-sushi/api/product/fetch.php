@@ -10,3 +10,10 @@ $products = $productModel->fetch();
 // status: success
 // categories: $products
 // オプション: JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT
+
+$json = json_encode([
+    'status' => 'success',
+    'products' => $products
+], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+
+echo $json;
