@@ -85,7 +85,8 @@ class Category
     {
         try {
             // TODO: カテゴリ登録のSQL
-            $sql = "";
+            $sql = "INSERT INTO categories (name, sort_order) 
+                    VALUES (:name, :sort_order)";
 
             $stmt = $this->pdo->prepare($sql);
             $result = $stmt->execute($data);
