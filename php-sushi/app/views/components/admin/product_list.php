@@ -19,7 +19,7 @@
                         <!-- TODO: products.image_path -->
                         <img src="" alt="" class="w-12">
                         <!-- TODO: products.name -->
-                        xxxx
+                        <?= $product['name'] ?>
                     </td>
                     <td class="border px-4 py-2">
                         <!-- TODO: products.price -->
