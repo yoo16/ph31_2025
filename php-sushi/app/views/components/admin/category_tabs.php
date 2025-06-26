@@ -12,7 +12,7 @@
             class="px-3 py-1 rounded 
                     <?= $category_id == $id ? 'bg-sky-600 text-white' : '' ?>">
             <!-- TODO: name -->
-            xxxx
+            <?= $name ?>
         </a>
     <?php endforeach; ?>
 </div>
