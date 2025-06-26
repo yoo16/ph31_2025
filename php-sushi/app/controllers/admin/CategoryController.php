@@ -18,7 +18,7 @@ class CategoryController
         $categoryModel = new Category();
         $categories = $categoryModel->fetch();
 
-        // Viewの表示
+        // Viewの表示 /app/views/admin/category/index.php
         require VIEW_DIR . 'admin/category/index.php';
     }
 
@@ -31,7 +31,7 @@ class CategoryController
         $categoryModel = new Category();
         $category['sort_order'] = $categoryModel->nextSortOrder();
 
-        // Viewの表示
+        // Viewの表示: app/views/admin/category/create.php
         require VIEW_DIR . 'admin/category/create.php';
     }
 
