@@ -170,7 +170,8 @@ class Product
     {
         try {
             // TODO: name で LIKE 検索するSQL文
-            $sql = "";
+            // 例）SELECT * FROM products WHERE name LIKE "%まぐろ%";
+            $sql = "SELECT * FROM products WHERE name LIKE :name";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute(['name' => "%{$keyword}%"]);
             $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
