@@ -17,7 +17,7 @@
                     </td>
                     <td class="border px-4 py-2">
                         <!-- TODO: products.image_path -->
-                        <img src="" alt="" class="w-12">
+                        <img src="<?= $product['image_path'] ?>" alt="" class="w-12">
                         <!-- TODO: products.name -->
                         <?= $product['name'] ?>
                     </td>
