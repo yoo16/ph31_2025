@@ -103,7 +103,7 @@ class Visit
     {
         try {
             // 税込み価格を計算
-            $total_with_tax = (int)($total * TAX_RATE);
+            $total_with_tax = (int)($total * (1 + TAX_RATE));
 
             $sql = "UPDATE visits 
                 SET status = 'billed', total = :total, total_with_tax = :total_with_tax 
