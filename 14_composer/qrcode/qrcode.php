@@ -1,6 +1,7 @@
 <?php
+// Cmposerのオートローダーを読み込む = PHPプログラムを読み込む
 require '../vendor/autoload.php';
-
+// QRコード生成ライブラリを読み込む
 use Endroid\QrCode\QrCode;
 use Endroid\QrCode\Writer\PngWriter;
 use Endroid\QrCode\Encoding\Encoding;
@@ -19,6 +20,12 @@ if (!$text) {
 }
 
 // TODO: QRコード生成
+$qrCode = new QrCode(
+    data: $text,
+    encoding: new Encoding('UTF-8'),
+    size: $size,
+    margin: $margin,
+);
 
 // TODO: PNGとして出力
 
