@@ -28,5 +28,10 @@ $qrCode = new QrCode(
 );
 
 // TODO: PNGとして出力
+$png = new PngWriter();
+$result = $png->write($qrCode);
 
-// TODO: 画像出力
+// TODO: 画像出力: MIMEタイプを設定
+header('Content-Type: image/png');
+// バイナリデータを出力
+echo $result->getString();
