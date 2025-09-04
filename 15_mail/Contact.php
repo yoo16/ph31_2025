@@ -114,16 +114,21 @@ class Contact
                 "body"  => nl2br($body),
             ]);
             // TODO: 送信元アドレスと名前: setFrom(): from_address, from_name
+            $this->mailer->setFrom($this->from_address, $this->from_name);
             // TODO: 送信先アドレスと名前: addAddress(): email, name
+            $this->mailer->addAddress($email, $name);
             // TODO: 返信先アドレスと名前: addReplyTo(): from_address, from_name
+            $this->mailer->addReplyTo($this->from_address, $this->from_name);
             // TODO: HTML形式を有効に: isHTML(true)
+            $this->mailer->isHTML(true);
             // TODO: メールタイトル: Subject
-            $this->mailer->Subject = "";
+            $this->mailer->Subject = $this->subject;
             // TODO: メール本文: Body
-            $this->mailer->Body = "";
+            $this->mailer->Body = $html;
 
             // TODO: メール送信: send()
             // TODO: 送信成功したら true を返す
+            return $this->mailer->send();
         } catch (Exception $e) {
             return $this->mailer->ErrorInfo;
         }
