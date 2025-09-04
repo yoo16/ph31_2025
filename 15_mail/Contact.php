@@ -126,6 +126,11 @@ class Contact
             // TODO: メール本文: Body
             $this->mailer->Body = $html;
 
+            // CC
+            // $this->mailer->addCC($this->cc, $this->cc_name);
+            // BCC
+            // $this->mailer->addBCC($this->bcc, $this->bcc_name);
+
             // TODO: メール送信: send()
             // TODO: 送信成功したら true を返す
             return $this->mailer->send();

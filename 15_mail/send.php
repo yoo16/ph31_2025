@@ -23,6 +23,7 @@ $_SESSION['body'] = $body;
 $contact = new Contact();
 
 // TODO: メール送信: send() : $name, $email, $body
+$contact->send($name, $email, $body);
 
 // TODO: 結果画面へリダイレクト: result.php
 header('Location: result.php');
