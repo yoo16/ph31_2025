@@ -23,8 +23,14 @@ $_SESSION['body'] = $body;
 $contact = new Contact();
 
 // TODO: メール送信: send() : $name, $email, $body
-$contact->send($name, $email, $body);
-
-// TODO: 結果画面へリダイレクト: result.php
-header('Location: result.php');
-exit;
+$result = $contact->send($name, $email, $body);
+if ($result === true) {
+    // TODO: 結果画面へリダイレクト: result.php
+    header('Location: result.php');
+    exit;
+} else {
+    // 送信失敗の場合は、エラーメッセージをセッションに保存してフォーム画面へリダイレクト
+    $_SESSION['error'] = 'メールの送信に失敗しました。' . $result;
+    header('Location: index.php');
+    exit;
+}

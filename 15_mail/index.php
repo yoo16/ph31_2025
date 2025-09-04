@@ -6,7 +6,8 @@ session_start();
 $name = (isset($_SESSION['name'])) ? $_SESSION['name'] : "";
 $email = (isset($_SESSION['email'])) ? $_SESSION['email'] : "";
 $body = (isset($_SESSION['body'])) ? $_SESSION['body'] : "";
-$error = '';
+$error = (isset($_SESSION['error'])) ? $_SESSION['error'] : "";
+unset($_SESSION['error']);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
