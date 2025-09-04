@@ -2,9 +2,9 @@
 require './vendor/autoload.php';
 
 // TODO: PHPMailer と Dotenv の名前空間をインポート
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\Exception;
-// use Dotenv\Dotenv;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
 
 class Contact
 {
@@ -32,19 +32,19 @@ class Contact
 
         // クラスメンバに $_ENV の値を代入
         // TODO: 送信元アドレス MAIL_FROM_ADDRESS
-        $this->from_address = "";
+        $this->from_address = $_ENV['MAIL_FROM_ADDRESS'];
         // TODO: 送信元名前: MAIL_FROM_NAME
-        $this->from_name    = "";
+        $this->from_name    = $_ENV['MAIL_FROM_NAME'];
         // TODO: SMTPサーバー: MAIL_HOST
-        $this->host         = "";
+        $this->host         = $_ENV['MAIL_HOST'];
         // TODO: SMTPユーザー名: MAIL_USERNAME
-        $this->username     = "";
+        $this->username     = $_ENV['MAIL_USERNAME'];
         // TODO: SMTPパスワード: MAIL_PASSWORD
-        $this->password     = "";
+        $this->password     = $_ENV['MAIL_PASSWORD'];
         // TODO: 暗号化方式: MAIL_ENCRYPTION
-        $this->encryption   = "";
+        $this->encryption   = $_ENV['MAIL_ENCRYPTION'];
         // TODO: ポート番号: MAIL_PORT
-        $this->port         = 0;
+        $this->port         = $_ENV['MAIL_PORT'];
 
         $this->setupMailer();
     }

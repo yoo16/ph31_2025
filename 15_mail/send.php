@@ -3,7 +3,7 @@
 session_start();
 
 // Contactクラス読み込み
-// require './Contact.php';
+require './Contact.php';
 
 // TODO: POSTデータ受け取り
 $name  = (isset($_POST['name'])) ? $_POST['name'] : "";
@@ -20,7 +20,7 @@ $_SESSION['email'] = $email;
 $_SESSION['body'] = $body;
 
 // Contactクラスのインスタンス化
-// $contact = new Contact();
+$contact = new Contact();
 
 // TODO: メール送信: send() : $name, $email, $body
 
