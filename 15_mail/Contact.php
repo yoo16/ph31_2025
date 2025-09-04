@@ -130,6 +130,8 @@ class Contact
             $this->mailer->addCC($this->from_address, $this->from_name);
             // BCC
             // $this->mailer->addBCC($this->bcc, $this->bcc_name);
+            // 添付ファイル
+            // $this->mailer->addAttachment('/path/to/image.jpg', '写真.jpg');
 
             // TODO: メール送信: send()
             // TODO: 送信成功したら true を返す
