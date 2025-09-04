@@ -1,10 +1,11 @@
 <?php
 // TODO: セッション開始
+session_start();
 
 // TODO: send.php のセッションデータを読み込み
-$name = '';
-$email = '';
-$body = '';
+$name = (isset($_SESSION['name'])) ? $_SESSION['name'] : "";
+$email = (isset($_SESSION['email'])) ? $_SESSION['email'] : "";
+$body = (isset($_SESSION['body'])) ? $_SESSION['body'] : "";
 $error = '';
 ?>
 <!DOCTYPE html>
