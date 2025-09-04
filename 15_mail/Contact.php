@@ -127,7 +127,7 @@ class Contact
             $this->mailer->Body = $html;
 
             // CC
-            // $this->mailer->addCC($this->cc, $this->cc_name);
+            $this->mailer->addCC($this->from_address, $this->from_name);
             // BCC
             // $this->mailer->addBCC($this->bcc, $this->bcc_name);
 

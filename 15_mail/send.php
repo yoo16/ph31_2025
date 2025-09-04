@@ -25,6 +25,11 @@ $contact = new Contact();
 // TODO: メール送信: send() : $name, $email, $body
 $result = $contact->send($name, $email, $body);
 if ($result === true) {
+    // セッション削除
+    unset($_SESSION['name']);
+    unset($_SESSION['email']);
+    unset($_SESSION['body']);
+
     // TODO: 結果画面へリダイレクト: result.php
     header('Location: result.php');
     exit;
