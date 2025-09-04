@@ -5,9 +5,9 @@
 require './Contact.php';
 
 // TODO: POSTデータ受け取り
-$name  = "";
-$email = "";
-$body  = "";
+$name  = (isset($_POST['name'])) ? $_POST['name'] : "";
+$email = (isset($_POST['email'])) ? $_POST['email'] : "";
+$body  = (isset($_POST['body'])) ? $_POST['body'] : "";
 
 // TODO: セッションデータ保存
 $_SESSION['name'];
