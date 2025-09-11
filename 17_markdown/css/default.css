@@ -1,0 +1,31 @@
+body {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    margin: auto;
+}
+
+.columns {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1 1 0;
+    min-width: 300px;
+}
+
+.box {
+    background: #fff;
+    padding: 1em;
+}
+
+pre {
+    font-size: 1rem;
+    padding: 1em;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
