@@ -43,6 +43,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // notices テーブルにデータを挿入
         $sql = "INSERT INTO notices (title, body, image) VALUES (?, ?, ?)";
         // TODO: SQL実行: prepare() と execute() を利用
+        $stmt = $pdo->prepare($sql);
+        $imagePath = "test";
+        $stmt->execute([$title, $body, $imagePath]);
+
         $message = "✅ 投稿が完了しました！";
     } else {
         $message = "⚠️ タイトルか画像のどちらかは必須です。";
