@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
 
     // TODO: png形式で出力: header("Content-Type: image/png");
     header("Content-Type: image/png");
-    if ($mode == 'download') {
+    if ($mode === 'download') {
         // TODO: ダウンロード用のヘッダーを設定
         header("Content-Disposition: attachment; filename=\"pixelated.png\"");
     }
