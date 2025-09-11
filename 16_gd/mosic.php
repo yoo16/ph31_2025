@@ -1,11 +1,10 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
     // TODO: アップロード画像ファイルパス取得: キー image
-    $file = "";
     $file = $_FILES['image']['tmp_name'];
     // TODO: pixelの粗さ取得: キー pixel
     // デフォルト: 20
-    $pixelSize = 20;
+    $pixelSize = intval($_POST['pixel']) ?? 20;
     
     // TODO: 出力方法取得: キー mode
     // デフォルト: show
