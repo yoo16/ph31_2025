@@ -1,5 +1,6 @@
 <?php
-require '../vendor/autoload.php';
+// vendor/autoload.phpを読み込む
+require 'vendor/autoload.php';
 
 // Markdownファイルのパス
 $file = './data/blog.md';
