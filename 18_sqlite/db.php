@@ -13,6 +13,8 @@ try {
     // SQLiteのDSNを設定
     $dsn = "sqlite:" . $dbFile;
     // TODO: PDOでSQLiteに接続
+    $pdo = new PDO($dsn);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if ($newDb) {
         // 新規ファイルができたときにテーブルを初期化
