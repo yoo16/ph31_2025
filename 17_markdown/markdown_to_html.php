@@ -24,7 +24,7 @@ $parsedown = null;
 // HTMLに変換: $text()メソッドを使用
 $html = "";
 // $markdown をエスケープされたMarkdownをHTMLに変換: htmlspecialchars()を使用
-$escapedMarkdown = "";
+$escapedMarkdown = htmlspecialchars($markdown, ENT_QUOTES | ENT_HTML5);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
