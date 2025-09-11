@@ -26,9 +26,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
     // TODO: $src から画像高さ取得: imagesy()
     $height = imagesy($src);
 
-    var_dump($width, $height);
-    exit;
-
     // ピクセル化の粗さを設定
     $smallW = intval($width / $pixelSize);
     $smallH = intval($height / $pixelSize);
@@ -36,11 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
     // 小さな画像を作成
     $small = imagecreatetruecolor($smallW, $smallH);
     // 元画像を小さな画像にリサイズ（解像度を下げる）
-    // imagecopyresampled($small, $src, 0, 0, 0, 0, $smallW, $smallH, $width, $height);
+    imagecopyresampled($small, $src, 0, 0, 0, 0, $smallW, $smallH, $width, $height);
 
     // 小さな画像を元のサイズに拡大（画像を粗くなる）
     $pixelated = imagecreatetruecolor($width, $height);
-    // imagecopyresized($pixelated, $small, 0, 0, 0, 0, $width, $height, $smallW, $smallH);
+    imagecopyresized($pixelated, $small, 0, 0, 0, 0, $width, $height, $smallW, $smallH);
 
     // TODO: png形式で出力: header("Content-Type: image/png");
     header("Content-Type: image/png");
@@ -50,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
     }
 
     // TODO: PNG形式で画像を出力: imagepng(): 対象画像リソース: $pixelated
-    imagegd($pixelated);
+    imagepng($pixelated);
 
     // メモリを解放
     // imagedestroy($src);
