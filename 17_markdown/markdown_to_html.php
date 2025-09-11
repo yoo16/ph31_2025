@@ -20,9 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['markdown'])) {
 }
 
 // TODO: ParseDownのインスタンスを作成
-$parsedown = null;
+$parsedown = new Parsedown();
 // HTMLに変換: $text()メソッドを使用
-$html = "";
+$html = $parsedown->text($markdown);
 // $markdown をエスケープされたMarkdownをHTMLに変換: htmlspecialchars()を使用
 $escapedMarkdown = htmlspecialchars($markdown, ENT_QUOTES | ENT_HTML5);
 ?>
