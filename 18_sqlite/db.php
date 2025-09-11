@@ -11,7 +11,7 @@ try {
     // ファイルが存在するかどうかを判定
     $newDb = !file_exists($dbFile);
     // SQLiteのDSNを設定
-    $schema = "sqlite:" . $dbFile;
+    $dsn = "sqlite:" . $dbFile;
     // TODO: PDOでSQLiteに接続
 
     if ($newDb) {
@@ -26,6 +26,8 @@ try {
 function createTables()
 {
     global $pdo;
+    if (!$pdo) return;
+
     $ddl = "CREATE TABLE IF NOT EXISTS notices (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 title TEXT NOT NULL,

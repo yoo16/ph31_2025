@@ -3,10 +3,10 @@ require_once __DIR__ . "/db.php";
 
 // notices テーブルから最新 20 件を取得, 並び順は created_at の降順
 $sql = "";
-// SQL実行
-$stmt = $pdo->query($sql);
-// SQL実行結果を配列で取得
-$posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// TODO: SQL実行し、SQLStatementを取得
+
+// TODO: SQLStatement から SQL実行結果を配列で取得
+$posts = [];
 ?>
 <!DOCTYPE html>
 <html lang="ja">
