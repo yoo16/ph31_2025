@@ -17,13 +17,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
     // 画像ファイル読み込み
     $upload_file = file_get_contents($file);
 
+    // GDライブラリが利用可能か確認
     // 文字列から画像リソースを作成: imagecreatefromstring(): 対象ファイル: $upload_file
-    $src = "";
+    $src = imagecreatefromstring($upload_file);
 
     // TODO: $src から画像幅取得: imagesx()
-    $width = 100;
+    $width = imagesx($src);
     // TODO: $src から画像高さ取得: imagesy()
-    $height = 100;
+    $height = imagesy($src);
+
+    var_dump($width, $height);
+    exit;
 
     // ピクセル化の粗さを設定
     $smallW = intval($width / $pixelSize);
