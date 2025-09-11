@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
     
     // TODO: 出力方法取得: キー mode
     // デフォルト: show
-    $mode = 'show';
+    $mode = $_POST['mode'];
 
     if (!file_exists($file)) {
         die('ファイルが見つかりません。');
@@ -41,18 +41,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
 
     // TODO: png形式で出力: header("Content-Type: image/png");
     header("Content-Type: image/png");
-    if ($mode === 'download') {
+    if ($mode == 'download') {
         // TODO: ダウンロード用のヘッダーを設定
-        // header("Content-Disposition: attachment; filename=\"pixelated.png\"");
+        header("Content-Disposition: attachment; filename=\"pixelated.png\"");
     }
 
     // TODO: PNG形式で画像を出力: imagepng(): 対象画像リソース: $pixelated
     imagepng($pixelated);
 
     // メモリを解放
-    // imagedestroy($src);
-    // imagedestroy($small);
-    // imagedestroy($pixelated);
+    imagedestroy($src);
+    imagedestroy($small);
+    imagedestroy($pixelated);
     exit;
 }
 ?>
