@@ -1,6 +1,7 @@
 <?php
+// DB接続をする
 require_once __DIR__ . "/db.php";
-
+// メッセージ用の変数
 $message = "";
 
 // アップロード用ディレクトリ確認
@@ -20,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // 画像ファイルのアップロード処理
     if (!empty($_FILES['image']['name'])) {
         // TODO: 画像ファイル名: $_FILES['image']['name'] , time() , basename() を利用 
-        $fileName = "";
+        $fileName = time() . "_" . basename($_FILES['image']['name']);
         $targetFile = $uploadDir . $fileName;
 
         // 拡張子チェック
