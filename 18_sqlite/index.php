@@ -49,6 +49,7 @@ $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="p-4">
                         <h3 class="font-semibold text-gray-800 text-lg mb-1">
                             <!-- TODO: title 表示 -->
+                            <?= $post['title'] ?>
                         </h3>
                         <p class="text-sm text-gray-500 mb-2">
                             <!-- TODO: created_at表示 -->
