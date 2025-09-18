@@ -58,6 +58,7 @@ $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <?php if (!empty($post['body'])): ?>
                             <p class="text-gray-600 text-sm truncate">
                                 <!-- TODO: 本文表示(brタグ付き) -->
+                                <?= nl2br($post['body']) ?>
                             </p>
                         <?php endif; ?>
                     </div>
