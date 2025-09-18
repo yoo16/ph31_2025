@@ -53,6 +53,7 @@ $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </h3>
                         <p class="text-sm text-gray-500 mb-2">
                             <!-- TODO: created_at表示 -->
+                            <?= date('Y年m月d日', strtotime($post['created_at'])) ?>
                         </p>
                         <?php if (!empty($post['body'])): ?>
                             <p class="text-gray-600 text-sm truncate">
