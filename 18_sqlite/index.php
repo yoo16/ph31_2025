@@ -37,7 +37,7 @@ $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     onclick="openModal('<?= htmlspecialchars($post['image']) ?>', '<?= htmlspecialchars($post['title']) ?>', `<?= nl2br(htmlspecialchars($post['body'])) ?>`)">
                     <?php if (!empty($post['image'])): ?>
                         <!-- TODO: 投稿画像表示 -->
-                        <img src=""
+                        <img src="<?= $post['image'] ?>"
                             alt="投稿画像"
                             class="w-full h-48 object-cover">
                     <?php else: ?>
