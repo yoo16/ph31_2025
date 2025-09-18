@@ -22,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (!empty($_FILES['image']['name'])) {
         // TODO: 画像ファイル名: $_FILES['image']['name'] , time() , basename() を利用 
         $fileName = time() . "_" . basename($_FILES['image']['name']);
+        // アップロード先のパス
         $targetFile = $uploadDir . $fileName;
 
         // 拡張子チェック
@@ -30,11 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if (in_array($ext, $allowed)) {
             // TODO: ファイルをアップロードディレクトリに移動
-            // if (move_uploaded_file($_FILES['image']['tmp_name'], $targetFile)) {
-            //     $imagePath = "uploads/" . $fileName;
-            // } else {
-            //     $message = "⚠️ 画像アップロードに失敗しました。";
-            // }
+            if (move_uploaded_file($_FILES['image']['tmp_name'], $targetFile)) {
+                $imagePath = "uploads/" . $fileName;
+            } else {
+                $message = "⚠️ 画像アップロードに失敗しました。";
+            }
         } else {
             $message = "⚠️ 許可されていないファイル形式です。";
         }
@@ -45,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $sql = "INSERT INTO notices (title, body, image) VALUES (?, ?, ?)";
         // TODO: SQL実行: prepare() と execute() を利用
         $stmt = $pdo->prepare($sql);
-        $imagePath = "test";
+        // $imagePath = "test";
         $stmt->execute([$title, $body, $imagePath]);
 
         $message = "✅ 投稿が完了しました！";
