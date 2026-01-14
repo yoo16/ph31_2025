@@ -36,7 +36,9 @@ class PdfGenerator
         $mpdf->autoPageBreak = false;
 
         // TODO: CSSを先に書き込む: writeHTML() モード 1
+        $mpdf->WriteHTML($css, 1);
         // TODO: HTMLを後で書き込む: writeHTML() モード 2
+        $mpdf->WriteHTML($html, 2);
 
         // 出力直前にバッファの中身（警告文など）を完全に捨てる
         if (ob_get_length()) ob_end_clean();
@@ -44,6 +46,7 @@ class PdfGenerator
         // ダウンロードファイル名
         $fileName = $this->config['default_filename'];
         // TODO: PDFを出力: Output() ダウンロードモード: D
+        $mpdf->Output($fileName, 'D');
         exit;
     }
 
