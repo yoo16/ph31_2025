@@ -31,7 +31,9 @@ class PdfGenerator
         // TODO: mPDFの初期化
         // 1. new Mpdf() で mPDFの初期化 
         // 2. $config['mpdf'] の設定
+        $mpdf = new Mpdf($this->config['mpdf']);
         // 強制設定：はみ出しによる自動改ページを無効化: autoPageBreak = false
+        $mpdf->autoPageBreak = false;
 
         // TODO: CSSを先に書き込む: writeHTML() モード 1
         // TODO: HTMLを後で書き込む: writeHTML() モード 2
