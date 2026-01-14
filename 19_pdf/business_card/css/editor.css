@@ -1,0 +1,173 @@
+:root {
+    --bg-color: #f8fafc;
+    --sidebar-bg: #ffffff;
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --border-color: #e2e8f0;
+    --text-main: #1e293b;
+    --text-label: #64748b;
+}
+
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    /* font-family: 'Inter', -apple-system, sans-serif; */
+    color: var(--text-main);
+}
+
+/* サイドバー */
+.editor-sidebar {
+    width: 380px;
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.02);
+}
+
+.editor-header {
+    padding: 24px 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.editor-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* フォームエリア */
+.editor-form {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--text-label);
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    background: #fdfdfd;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* ボタン */
+.btn-download {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 10px;
+}
+
+.btn-download:hover {
+    background: var(--primary-hover);
+}
+
+.btn-download:active {
+    transform: scale(0.98);
+}
+
+/* 入力行の横並び設定 */
+.editor-row {
+    display: flex;
+    gap: 10px;
+}
+
+.main-input {
+    flex: 1;
+}
+
+.color-input {
+    width: 50px;
+}
+
+/* カラーピッカーを固定幅に */
+
+.color-input input[type="color"] {
+    width: 100%;
+    height: 35px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+/* 背景スライダーのレイアウト */
+.bg-manager {
+    background: #f8f9fa;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.bg-manager h3 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #636e72;
+}
+
+.slider-row {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    /* ラベルとスライダーを綺麗に整列 */
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.slider-row label {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.preview-main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-header {
+    margin-bottom: 32px;
+}
+
+.preview-header h2 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-label);
+}
+
+.preview-canvas {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    background: white;
+    line-height: 0;
+}

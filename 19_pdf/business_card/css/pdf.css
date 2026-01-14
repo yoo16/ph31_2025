@@ -1,0 +1,59 @@
+@page {
+    /* 91x55mmにサイズを厳密に固定 */
+    size: 91mm 55mm;
+    margin: 0;
+    font-family: noto_sans_jp;
+}
+
+.card {
+    font-family: noto_sans_jp;
+
+    /* 91x55mmにサイズを厳密に固定 */
+    width: 91mm;
+    height: 55mm;
+
+    position: relative;
+    overflow: hidden;
+
+    box-sizing: border-box;
+    padding: 10mm 7mm;
+
+    background-color: #fff;
+    background-size: 150%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    /* テキストの基本設定 */
+    line-height: 1.2;
+
+    /* PDFでの意図しない改ページを防止 */
+    page-break-inside: avoid;
+    display: block;
+}
+
+/* --- 3. テキスト要素のスタイル --- */
+.name {
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 1mm;
+    color: #2d3436;
+}
+
+.title {
+    font-size: 8pt;
+    color: #d63031;
+    font-weight: bold;
+    margin-bottom: 6mm;
+}
+
+.info {
+    font-size: 8pt;
+    line-height: 1.8;
+    color: #636e72;
+}
+
+/* --- 4. ブラウザ（エディタ）表示時のみの装飾 --- */
+.preview-canvas .card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}

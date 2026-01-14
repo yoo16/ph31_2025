@@ -1,0 +1,33 @@
+body {
+    font-family: noto_sans_jp;
+}
+
+.header {
+    background-color: #d63031;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 36pt;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.content {
+    padding: 30px;
+    line-height: 1.6;
+}
+
+.price {
+    font-size: 24pt;
+    color: #2d3436;
+    text-align: center;
+    font-weight: bold;
+}
+
+.item-image {
+    margin: 20px auto;
+    width: 500px;
+}
