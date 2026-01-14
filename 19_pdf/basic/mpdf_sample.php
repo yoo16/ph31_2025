@@ -10,7 +10,7 @@ $config = [
 ];
 
 // TODO:インスタンス化: 
-// $mpdf = new Mpdf($config);
+$mpdf = new Mpdf($config);
 
 // HTMLを書き込み
 $html = '
@@ -18,6 +18,7 @@ $html = '
     <p>これは最小構成のサンプルです。</p>
 ';
 // TODO: HTMLを書き込み: WriteHTML()
-// $mpdf->WriteHTML($html);
+$mpdf->WriteHTML($html);
 
 // TODO:ブラウザに表示: Output() (I: Inline, D: Download)
+$mpdf->Output('mpdf_sample.pdf', 'I');
