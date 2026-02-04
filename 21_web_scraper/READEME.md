@@ -1,5 +1,5 @@
 ## Composer
 
 ```bash
-composer require guzzlehttp/guzzle symfony/dom-crawler`
+composer require guzzlehttp/guzzle symfony/dom-crawler
 ```
