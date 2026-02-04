@@ -51,22 +51,22 @@ try {
     // 物件情報を抽出
     $crawler->filter('.cassetteitem')->each(function (Crawler $node) use (&$properties) {
         // TODO: 対象の区を取得
-        // $area_code = $_POST['area'];
+        $area_code = $_POST['area'];
 
         // TODO: 物件名
-        // $title = $node->filter('.cassetteitem_content-title')->text();
-        // $title = trim($title);
+        $title = $node->filter('.cassetteitem_content-title')->text();
+        $title = trim($title);
 
         // TODO: 住所
-        // $address = $node->filter('.cassetteitem_detail-col1')->text();
-        // $address = trim($address);
+        $address = $node->filter('.cassetteitem_detail-col1')->text();
+        $address = trim($address);
 
         // TODO: 配列に追加
         $properties[] = [
-            // 'area_code' => $area_code,
-            // 'title'     => $title,
-            // 'address'   => $address,
-            // 'scraped_at' => date('Y-m-d H:i:s')
+            'area_code' => $area_code,
+            'title'     => $title,
+            'address'   => $address,
+            'scraped_at' => date('Y-m-d H:i:s')
         ];
     });
 
@@ -74,10 +74,10 @@ try {
     $fileName = "data/properties_{$area}.json";
 
     // TODO: JSON形式に変換
-    // $jsonContent = json_encode($properties, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+    $jsonContent = json_encode($properties, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
     // TODO: ファイルに書き込み
-    // file_put_contents($fileName, $jsonContent);
+    file_put_contents($fileName, $jsonContent);
 
     // 完了時にエリア名をクエリパラメータで渡す
     header("Location: suumo.php?status=success&area={$area}");
