@@ -178,9 +178,9 @@ chatForm.onsubmit = e => {
     const msg = chatInput.value.trim();
     if (msg) {
         // TODO: WebSocketで相手に chat を送信
-        // socket.send(JSON.stringify({ chat: msg }));
-        // addChatMessage('Me', msg);
-        // chatInput.value = '';
+        socket.send(JSON.stringify({ chat: msg }));
+        addChatMessage('Me', msg);
+        chatInput.value = '';
     }
 };
 

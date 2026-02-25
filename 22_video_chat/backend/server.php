@@ -26,19 +26,19 @@ class VideoChat implements MessageComponentInterface
     // TODO: クライアントの接続
     public function onOpen(ConnectionInterface $conn)
     {
-        // $this->clients->attach($conn);
+        $this->clients->attach($conn);
     }
 
     // TODO: メッセージの送受信
     public function onMessage(ConnectionInterface $from, $msg)
     {
-        // foreach ($this->clients as $client) {
-        //     if ($from !== $client) {
-        //         $client->send($msg);
-        //         // ログ出力
-        //         echo $msg . PHP_EOL;
-        //     }
-        // }
+        foreach ($this->clients as $client) {
+            if ($from !== $client) {
+                $client->send($msg);
+                // ログ出力
+                echo $msg . PHP_EOL;
+            }
+        }
     }
 
     // クライアントの切断
